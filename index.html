@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Carpeta técnica · Taller de Electricidad 2.° año</title>
+<meta name="description" content="Carpeta técnica del Taller de Electricidad de 2.° año. Abrila o descargala en PDF: siempre está la última versión.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Carpeta técnica · Taller de Electricidad 2.° año">
+<meta property="og:description" content="Abrila o descargala en PDF. Siempre está la última versión.">
+<meta property="og:image" content="https://rodolfoemanuelduran-dotcom.github.io/carpeta-electricidad/logo-red.jpg">
+<meta name="theme-color" content="#1f4e79">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231f4e79'/%3E%3Cpath d='M36 8 16 36h14l-4 20 22-30H34z' fill='%23f5c400'/%3E%3C/svg%3E">
+<style>
+  :root {
+    --fondo: #f4f6f9;
+    --tarjeta: #ffffff;
+    --texto: #1f2328;
+    --suave: #5b6470;
+    --marca: #1f4e79;
+    --marca-texto: #ffffff;
+    --recuadro: #e6eef7;
+    --borde: #d5dae0;
+    --foco: #f5c400;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --fondo: #0d141c;
+      --tarjeta: #151f2b;
+      --texto: #e6edf3;
+      --suave: #a3afbd;
+      --marca: #2f6aa8;
+      --marca-texto: #ffffff;
+      --recuadro: #1a2e45;
+      --borde: #2b3a4b;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--fondo);
+    color: var(--texto);
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans", sans-serif;
+    font-size: 17px;
+    line-height: 1.5;
+  }
+  main { max-width: 560px; margin: 0 auto; padding: 16px 16px 32px; }
+  .logo { display: block; width: 100%; height: auto; border-radius: 16px; background: #000; }
+  .colores { display: flex; height: 6px; margin: 14px 0 0; border-radius: 3px; overflow: hidden; }
+  .colores span { flex: 1; }
+  .colores .f { background: #7a4a24; }
+  .colores .n { background: #4fa3d9; }
+  .colores .t { background: repeating-linear-gradient(90deg, #2e9b45 0 10px, #f2c500 10px 20px); }
+  .kicker { margin: 16px 0 0; color: var(--suave); font-size: 14px; }
+  h1 { margin: 2px 0 0; font-size: 34px; line-height: 1.15; letter-spacing: -0.01em; }
+  .sub { margin: 4px 0 0; color: var(--suave); }
+  .estado { margin: 12px 0 0; font-size: 15px; color: var(--suave); }
+  .estado strong { color: var(--texto); }
+  .acciones { display: grid; gap: 12px; margin: 18px 0 0; }
+  .btn {
+    display: flex; align-items: center; justify-content: center; gap: 10px;
+    min-height: 56px; padding: 12px 18px; border-radius: 14px;
+    font-size: 18px; font-weight: 700; text-decoration: none;
+  }
+  .btn svg { width: 24px; height: 24px; flex: none; }
+  .primario { background: var(--marca); color: var(--marca-texto); }
+  .secundario { background: var(--tarjeta); color: var(--texto); border: 2px solid var(--marca); }
+  .btn:focus-visible { outline: 3px solid var(--foco); outline-offset: 3px; }
+  .copiar {
+    margin: 24px 0 0; padding: 12px 16px 14px;
+    background: var(--recuadro); border: 2px solid var(--marca); border-radius: 12px;
+  }
+  .etiqueta {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--marca); color: var(--marca-texto);
+    font-size: 12px; font-weight: 700; letter-spacing: 0.05em;
+    padding: 3px 9px; border-radius: 6px;
+  }
+  .etiqueta svg { width: 14px; height: 14px; }
+  .copiar p { margin: 8px 0 0; }
+  .ayuda { margin: 22px 0 0; padding: 14px 16px; background: var(--tarjeta); border: 1px solid var(--borde); border-radius: 12px; }
+  .ayuda h2 { margin: 0; font-size: 17px; }
+  .ayuda ul { margin: 6px 0 0; padding-left: 20px; }
+  .ayuda li { margin: 4px 0; }
+  footer { margin: 24px 0 0; font-size: 14px; color: var(--suave); text-align: center; }
+</style>
+</head>
+<body>
+<main>
+  <img class="logo" src="logo-red.jpg" width="960" height="459"
+       alt="Logo R.E.D armado con cables, llaves termomagnéticas, borneras y un multímetro">
+  <div class="colores" aria-hidden="true"><span class="f"></span><span class="n"></span><span class="t"></span></div>
+
+  <p class="kicker">E.T. N.° 1 «Crucero ARA General Belgrano» · Tucumán</p>
+  <h1>Carpeta técnica</h1>
+  <p class="sub">Taller de Electricidad · 2.° año · 2026</p>
+  <p class="estado" id="estado" hidden></p>
+
+  <div class="acciones">
+    <a class="btn primario" id="abrir" href="carpeta-tecnica.pdf" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/><path d="M9 13h6M9 17h6"/></svg>
+      Abrir la carpeta
+    </a>
+    <a class="btn secundario" id="bajar" href="carpeta-tecnica.pdf" download="Carpeta tecnica Electricidad 2do año.pdf">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11"/><path d="m7 10 5 5 5-5"/><path d="M5 20h14"/></svg>
+      Descargar el PDF
+    </a>
+  </div>
+
+  <section class="copiar" aria-label="Qué se copia en la carpeta">
+    <span class="etiqueta">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20h4L19 9l-4-4L4 16z"/></svg>
+      PARA COPIAR EN TU CARPETA
+    </span>
+    <p><strong>Solo se copia lo que está en los recuadros sombreados</strong>, como este: unas 8 carillas en todo el taller.</p>
+    <p>Lo demás se lee, se mira o se resuelve con tus palabras.</p>
+  </section>
+
+  <section class="ayuda">
+    <h2>¿No se abre?</h2>
+    <ul>
+      <li>Tocá «Descargar el PDF» y abrilo desde las descargas del celular.</li>
+      <li>Si no tenés datos o conexión, pedile la copia impresa al docente.</li>
+    </ul>
+  </section>
+
+  <footer>Docentes: Rodolfo Emanuel Durán y Lino Salazar</footer>
+</main>
+<script>
+  // Muestra la fecha de la última actualización y evita que el celular abra una copia vieja.
+  (async function () {
+    var pdf = 'carpeta-tecnica.pdf';
+    try {
+      var r = await fetch(pdf, { method: 'HEAD', cache: 'no-store' });
+      if (!r.ok) return;
+      var partes = [];
+      var lm = r.headers.get('Last-Modified');
+      var d = lm ? new Date(lm) : null;
+      if (d && !isNaN(d)) {
+        partes.push('Actualizada el <strong>' +
+          d.toLocaleDateString('es-AR', { day: 'numeric', month: 'long', year: 'numeric' }) + '</strong>');
+        var conVersion = pdf + '?v=' + d.getTime();
+        document.getElementById('abrir').href = conVersion;
+        document.getElementById('bajar').href = conVersion;
+      }
+      var len = Number(r.headers.get('Content-Length'));
+      if (len > 0) partes.push('<span style="white-space:nowrap">PDF de ' +
+        (len / 1048576).toFixed(1).replace('.', ',') + '&nbsp;MB</span>');
+      if (partes.length) {
+        var e = document.getElementById('estado');
+        e.innerHTML = partes.join(' · ');
+        e.hidden = false;
+      }
+    } catch (err) { /* sin conexión: los botones siguen funcionando */ }
+  })();
+</script>
+</body>
+</html>
