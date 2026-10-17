@@ -1,6 +1,6 @@
 # Carpeta técnica · Taller de Electricidad 2.° año
 
-Página para los alumnos: https://rodolfoemanuelduran-dotcom.github.io/carpeta-electricidad/
+Página para los alumnos: https://rodolfoemanuelduran-dotcom.github.io/carpeta-tecnica-electricidad-2-a-o/
 
 El QR del aula apunta a esa dirección. La página tiene dos botones, uno para abrir el PDF y otro para descargarlo, y muestra la fecha de la última actualización.
 
@@ -12,7 +12,7 @@ El QR del aula apunta a esa dirección. La página tiene dos botones, uno para a
 
 ## No cambiar
 
-- El nombre del repositorio, `carpeta-electricidad`.
+- El nombre del repositorio, `carpeta-tecnica-electricidad-2-a-o`.
 - El nombre del archivo, `carpeta-tecnica.pdf`.
 - El archivo `index.html`.
 
